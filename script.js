@@ -10,7 +10,7 @@ const playAudio = (e) => {
   audio.play();
 };
 
-// play audio when clicking on boxes
+// play audio when clicking on boxes for mobile or screen touch devices
 const playAudioOnClick = (e) => {
   let target = e.target;
   if (target.classList.length === 0 || target.classList.contains("sound")) {
