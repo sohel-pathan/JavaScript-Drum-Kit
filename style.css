@@ -1,3 +1,4 @@
+/* reset css */
 * {
   margin: 0;
   padding: 0;
@@ -8,15 +9,23 @@ html {
   font-size: 62.5%; /* 1rem equal 10px */
 }
 
-body{
+body {
   font-family: sans-serif;
   min-height: 100vh;
-  background: url('./image/background.jpg') center center;
+  background: rgb(65, 64, 91);
+  background: linear-gradient(
+    247deg,
+    rgba(65, 64, 91, 1) 50%,
+    rgba(22, 65, 71, 1) 100%
+  );
+  /* background: url("./image/background.jpg") center center;
+   */
   background-size: cover;
   display: grid;
   place-content: center;
 }
 
+/* main wrapper */
 .keys {
   display: grid;
   place-content: center;
@@ -25,18 +34,20 @@ body{
   gap: 1rem;
 }
 
+/* key */
 .key {
-  border: .4rem solid black;
-  border-radius: .5rem;
+  border: 0.4rem solid rgb(19, 19, 29);
+  border-radius: 0.5rem;
   font-size: 1.5rem;
-  padding: 1rem .5rem;
-  transition: all .07s ease;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
   text-align: center;
-  color: white;
-  background: rgba(0,0,0,0.8);
-  text-shadow: 0 0 .5rem black;
+  color: rgba(65, 64, 91, 1);
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
+/* transition add with js */
 .playing {
   transform: scale(1.1);
   border-color: #ffc600;
@@ -51,6 +62,6 @@ kbd {
 .sound {
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: #ffc600;
 }
