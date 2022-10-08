@@ -9,13 +9,13 @@ const playAudio = (e) => {
   audio.play();
 };
 
-// play audio when clicking on boxes
-const playAudioOnClick = (e) => {
+// play audio when clicking on boxes for mobile or screen touch devices
+const playAudioOnClick = (e) => 
   let target = e.target;
 
   if (target.classList.length === 0 || target.classList.contains("sound")) {
     target = target.parentElement;
-  } else target = target;
+  } 
   
   const key = target;
   const audioKeyCode = target.attributes["data-key"].value;
